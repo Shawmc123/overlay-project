@@ -9,7 +9,7 @@
     <!-- {{$store.state.state}} -->
     <!-- {{$store.state.state.players}} -->
     <div class="bottom-0 absolute">
-      <Playerboard :player="currentPlayer.name" :boost="currentPlayer.score" :goals="currentPlayer.goals"/>
+      <Playerboard v-if="currentPlayer" :player="currentPlayer.name" :boost="currentPlayer.score" :goals="currentPlayer.goals"/>
     </div>
     <div class="grid justify-items-center">
       <Scoreboard team1="Blue" score1="1" team2="Orange" score2="0"/>
@@ -25,8 +25,11 @@ export default {
   },
   computed: {
     currentPlayer() {
-      return this.$store.state.state.players[this.$store.state.state.target]
-    },
+      if (this.$store.state.state.players !== undefined) {
+        return this.$store.state.state.players[this.$store.state.state.game.target]
+      }
+      else return {}
+    }
   }
 }
 
