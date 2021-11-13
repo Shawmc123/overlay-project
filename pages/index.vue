@@ -9,7 +9,10 @@
     <!-- {{$store.state.state}} -->
     <!-- {{$store.state.state.players}} -->
     <div class="bottom-0 absolute">
-      <Playerboard/>
+      <Playerboard :player="currentPlayer.name" :boost="currentPlayer.score" :goals="currentPlayer.goals"/>
+    </div>
+    <div class="grid justify-items-center">
+      <Scoreboard team1="Blue" score1="1" team2="Orange" score2="0"/>
     </div>
   </div>
 </template>
@@ -18,6 +21,13 @@
 export default {
   created() {
     this.$store.dispatch('initWebsocket')
+  },
+  computed: {
+    currentPlayer() {
+      return this.$store.state.state.players[this.$store.state.state.target]
+    },
   }
 }
+
+
 </script>
