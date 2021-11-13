@@ -21,7 +21,7 @@ export default {
 
 <style scoped>
 .smoothwidth {
-  transition: width 0.2s ease-in-out,
-              padding-left 0.2s ease-in-out;
+  transition: width 0.6s ease-in-out,
+              padding-left 0.6s ease-in-out;
 }
 </style>
