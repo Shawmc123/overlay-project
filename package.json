@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "core-js": "^3.15.1",
-    "nuxt": "^2.15.7"
+    "isomorphic-ws": "^4.0.1",
+    "nuxt": "^2.15.7",
+    "ws": "^8.2.3"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^4.2.0",
