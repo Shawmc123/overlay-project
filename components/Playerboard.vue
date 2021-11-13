@@ -1,11 +1,16 @@
 <template>
-  <div class = "max-w-xs mx-auto sm:px-6 lg:px-12 bg-gradient-to-b from-blue-200 via-blue-400 to-blue-800 rounded-3xl border-4 border-blue-500">
-    <h1 class = "w-32 text-white-600 sm:px-6 lg:px-12 font-mono antialiased">
-      {{name}} 
-      {{score}}
-      {{goals}}
-      {{shots}}
-    </h1>
+  <div class="w-screen">
+    <div class="flex-justify-between w-1/2 text-white sm:px-6 font-mono antialiased sm:px-6 bg-gradient-to-r from-blue-800 via-blue-400 to-blue-200 border-4 border-blue-500">
+     <span class="text-2xl pr-8 bg-gradient-to-r from blue-700 via-blue-600 to-blue-500 bg-clip-border bg-opacity-50"> {{name}}</span> 
+     <span class="font-extrabold text-xl font-mono pl-4">{{score}}</span> 
+     <span class="font-extrabold text-lg font-mono">Score</span> 
+     <span class="font-extrabold text-xl font-mono pl-4">{{goals}}</span> 
+     <span class="font-extrabold text-lg font-mono">Goals </span>
+     <span class="font-extrabold text-xl font-mono pl-4">{{shots}}</span> 
+     <span class="font-extrabold text-lg font-mono"> Shots  </span>
+     <span class="font-extrabold text-xl font-mono pl-4">{{assists}}</span> 
+     <span class="font-extrabold text-lg font-mono">Assists</span>
+    </div>
   </div>
 </template>
 
