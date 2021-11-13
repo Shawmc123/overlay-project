@@ -3,7 +3,7 @@
   <h1>
     {{name}} 
   </h1>
-  <div class="h-2 w-1/2 mb-2 bg-red-100" :style="{width:boost+'%'}">
+  <div class="h-2 mb-2 bg-red-100 smoothwidth" :style="{width:boost+'%'}">
     <!-- <p> {{boost}} </p> -->
   </div>
 </div>
@@ -14,7 +14,14 @@
 export default {
   props: {
     name: {default:'', type:String},
-    boost: {default:'0', type:String}
+    boost: {default:0, type:Number}
   }
 }
 </script>
+
+<style scoped>
+.smoothwidth {
+  transition: width 0.2s ease-in-out,
+              padding-left 0.2s ease-in-out;
+}
+</style>
