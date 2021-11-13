@@ -4,7 +4,8 @@ export const state = () => ({
     ws: null,
     wsAddress: 'ws://192.168.137.1:49122',
     counter: 0,
-    state: {}
+    state: {},
+    events: []
 })
 
 export const mutations = {
@@ -13,6 +14,12 @@ export const mutations = {
     },
     newWs(state, ws) {
         state.ws = ws
+    },
+    newEvent(state, e) {
+        state.events.append(e)
+    },
+    newState(state, newState) {
+        state.state = newState
     }
 }
 
@@ -25,8 +32,11 @@ export const actions = {
         state.ws.onmessage = (e) => dispatch('processMessage', e)
     },
     async processMessage({commit}, message) {
-        console.log('message', JSON.parse(message.data))
-        
+        const data = JSON.parse(message.data)
+        console.log('message', data)
+        commit('newEvent', data)
+        if (data.event == 'game:update_state') {
+            commit('newState', data.data)
+        }
     }
-
 }

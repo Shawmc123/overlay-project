@@ -10,6 +10,7 @@
       <BoostAmount name="Shaw"/>
       <BoostAmount name="Shaw"/>
     </div>
+    {{$store.state.state}}
     <div class="bottom-0 absolute">
       <Playerboard/>
     </div>
