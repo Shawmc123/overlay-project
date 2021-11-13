@@ -16,7 +16,7 @@ export const mutations = {
         state.ws = ws
     },
     newEvent(state, e) {
-        state.events.push(e)
+        // state.events.append(e)
     },
     newState(state, newState) {
         state.state = newState
@@ -33,10 +33,11 @@ export const actions = {
     },
     async processMessage({commit}, message) {
         const data = JSON.parse(message.data)
-        console.log('message', data)
         commit('newEvent', data)
         if (data.event == 'game:update_state') {
             commit('newState', data.data)
+        } else {
+            console.log('message', data)
         }
     }
 }
