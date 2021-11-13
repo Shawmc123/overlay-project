@@ -16,7 +16,7 @@ export const mutations = {
         state.ws = ws
     },
     newEvent(state, e) {
-        state.events.append(e)
+        state.events.push(e)
     },
     newState(state, newState) {
         state.state = newState

@@ -1,16 +1,13 @@
 <template>
   <div>
     <div class="left-0 absolute">
-      <BoostAmount name="Shaw"/>
-      <BoostAmount name="Adam"/>
-      <BoostAmount name="Lew"/>
+      <BoostAmount v-for="(item,index) in $store.state.state.players" v-if="item.team==0" :name="item.name" :boost="item.boost" :key="index"/>
     </div> 
     <div class="right-0 absolute">
-      <BoostAmount name="Shaw" boost="50"/>
-      <BoostAmount name="Shaw"/>
-      <BoostAmount name="Shaw"/>
+      <BoostAmount v-for="(item,index) in $store.state.state.players" v-if="item.team==1" :name="item.name" :boost="item.boost" :key="index"/>
     </div>
-    {{$store.state.state}}
+    <!-- {{$store.state.state}} -->
+    <!-- {{$store.state.state.players}} -->
     <div class="bottom-0 absolute">
       <Playerboard/>
     </div>
