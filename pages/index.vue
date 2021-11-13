@@ -9,7 +9,7 @@
     <!-- {{$store.state.state}} -->
     <!-- {{$store.state.state.players}} -->
     <div class="bottom-0 absolute">
-      <Playerboard v-if="currentPlayer" :player="currentPlayer.name" :boost="currentPlayer.score" :goals="currentPlayer.goals"/>
+      <Playerboard :name="currentPlayer.name" :score="currentPlayer.score" :goals="currentPlayer.goals" :assists="currentPLayer.assists"/>
     </div>
     <div class="grid justify-items-center">
       <Scoreboard team1="Blue" score1="1" team2="Orange" score2="0"/>
@@ -28,7 +28,7 @@ export default {
         return this.$store.state.state.players[this.$store.state.state.game.target]
       }
       else return {}
-    }
+    },
   }
 }
 

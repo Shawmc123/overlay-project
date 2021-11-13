@@ -13,7 +13,7 @@
 export default {
   props: {
     name: {default:'', type:String},
-    goals: {default:'', type:String},
+    goals: {default:'', type:Number},
     assists: {default:'', type:String},
     score: {default:'', type:String},
     name: {default:'', type:String},
