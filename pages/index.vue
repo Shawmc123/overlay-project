@@ -2,7 +2,7 @@
   <div>
     <div class="left-0 absolute">
       <BoostAmount v-for="(item,index) in $store.state.state.players" v-if="item.team==0" :name="item.name" :boost="item.boost" :key="index"/>
-    </div> 
+    </div>
     <div class="right-0 absolute">
       <BoostAmount v-for="(item,index) in $store.state.state.players" v-if="item.team==1" :name="item.name" :boost="item.boost" :key="index"/>
     </div>
@@ -12,7 +12,7 @@
       <Playerboard v-if="currentPlayer" :player="currentPlayer.name" :boost="currentPlayer.score" :goals="currentPlayer.goals"/>
     </div>
     <div class="grid justify-items-center">
-      <Scoreboard team1="Blue" score1="1" team2="Orange" score2="0"/>
+      <Scoreboard :team0="getTeam0.name" :score0="getTeam0.score" :team1="getTeam1.name" :score1="getTeam1.score"/>
     </div>
   </div>
 </template>
@@ -26,8 +26,17 @@ export default {
     currentPlayer() {
       if (this.$store.state.state.players !== undefined) {
         return this.$store.state.state.players[this.$store.state.state.game.target]
-      }
-      else return {}
+      } else return {}
+    },
+    getTeam0() {
+      if (this.$store.state.state.game.teams[0] !== undefined) {
+        return this.$store.state.state.game.teams[0]
+      } else return {}
+    },
+    getTeam1() {
+      if (this.$store.state.state.game.teams[1] !== undefined) {
+        return this.$store.state.state.game.teams[1]
+      } else return {}
     }
   }
 }
