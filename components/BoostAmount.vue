@@ -3,8 +3,8 @@
   <h1>
     {{name}} 
   </h1>
-  <div class="h-2 w-1/2 mb-2 bg-red-100">
-    <p> {{boost}} </p>
+  <div class="h-2 w-1/2 mb-2 bg-red-100" :style="{width:boost+'%'}">
+    <!-- <p> {{boost}} </p> -->
   </div>
 </div>
 </template>
