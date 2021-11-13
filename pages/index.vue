@@ -9,7 +9,7 @@
     <!-- {{$store.state.state}} -->
     <!-- {{$store.state.state.players}} -->
     <div class="bottom-0 absolute">
-      <Playerboard v-if="currentPlayer" :player="currentPlayer.name" :boost="currentPlayer.score" :goals="currentPlayer.goals"/>
+      <Playerboard :name="currentPlayer.name" :score="currentPlayer.score" :goals="currentPlayer.goals" :assists="currentPLayer.assists"/>
     </div>
     <div class="grid justify-items-center">
       <Scoreboard :team0="getTeam0.name" :score0="getTeam0.score" :team1="getTeam1.name" :score1="getTeam1.score"/>
@@ -20,13 +20,14 @@
 <script>
 export default {
   created() {
+    this.$store.dispatch('initFakeData')
     this.$store.dispatch('initWebsocket')
   },
   computed: {
     currentPlayer() {
       if (this.$store.state.state.players !== undefined) {
         return this.$store.state.state.players[this.$store.state.state.game.target]
-      } else return {}
+      }
     },
     getTeam0() {
       if (this.$store.state.state.game.teams[0] !== undefined) {
