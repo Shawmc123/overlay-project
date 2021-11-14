@@ -1,5 +1,5 @@
 <template>
-<div class="mt-3 bg-gradient-to-l from-blue-300 via-indigo-400 to-blue-500 w-60 min-w-full">
+<div class="mt-3 bg-gradient-to-l from-blue-300 via-indigo-400 to-blue-500 w-60 min-w-full rounded clip">
   <h1 class="text-gray-300 smoothwidth font-bold text-xl flex justify-between">
     {{name}}
     <span class="px-4">
@@ -26,5 +26,8 @@ export default {
 .smoothwidth {
   transition: width 0.6s ease-in-out,
               padding-left 0.6s ease-in-out;
+}
+.clip {
+  overflow: clip;
 }
 </style>

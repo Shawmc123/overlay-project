@@ -20,8 +20,7 @@
 <script>
 export default {
   created() {
-    this.$store.dispatch('initFakeData')
-    //this.$store.dispatch('initWebsocket')
+    this.$store.dispatch('initWebsocket')
   },
   computed: {
     currentPlayer() {
