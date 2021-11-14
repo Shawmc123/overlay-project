@@ -9,7 +9,7 @@
     <!-- {{$store.state.state}} -->
     <!-- {{$store.state.state.players}} -->
     <div class="bottom-0 absolute">
-      <Playerboard :name="currentPlayer.name" :score="currentPlayer.score" :goals="currentPlayer.goals" :assists="currentPlayer.assists" :shots="currentPlayer.shots" :saves="currentPlayer.saves"/>
+      <Playerboard :name="currentPlayer.name" :score="currentPlayer.score" :goals="currentPlayer.goals" :assists="currentPlayer.assists" :shots="currentPlayer.shots" :saves="currentPlayer.saves" :boost="currentPlayer.boost"/>
     </div>
     <div class="grid justify-items-center">
       <Scoreboard :team0="getTeam0.name" :score0="getTeam0.score" :team1="getTeam1.name" :score1="getTeam1.score" :time="getTime"/>
