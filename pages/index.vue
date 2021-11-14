@@ -20,7 +20,7 @@
 <script>
 export default {
   created() {
-    this.$store.dispatch('initFakeData')
+    //this.$store.dispatch('initFakeData')
     this.$store.dispatch('initWebsocket')
   },
   computed: {
