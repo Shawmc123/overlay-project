@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="left-0 absolute">
+    <div class="left-0 absolute pl-1">
       <BoostAmount v-for="(item,index) in $store.state.state.players" v-if="item.team==0" :name="item.name" :boost="item.boost" :key="index"/>
     </div>
-    <div class="right-0 absolute">
+    <div class="right-0 absolute pr-1">
       <BoostAmount v-for="(item,index) in $store.state.state.players" v-if="item.team==1" :name="item.name" :boost="item.boost" :key="index"/>
     </div>
     <!-- {{$store.state.state}} -->
@@ -20,7 +20,7 @@
 <script>
 export default {
   created() {
-    //this.$store.dispatch('initFakeData')
+    this.$store.dispatch('initFakeData')
     this.$store.dispatch('initWebsocket')
   },
   computed: {

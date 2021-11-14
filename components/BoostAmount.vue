@@ -1,6 +1,6 @@
 <template>
-<div class="mt-3 bg-gradient-to-l from-blue-300 via-indigo-400 to-blue-500 w-60 min-w-full">
-  <h1>
+<div class="mt-3 bg-gradient-to-l from-blue-300 via-indigo-400 to-blue-500 w-60 min-w-full rounded overflow-clip">
+  <h1 class="text-gray-50 p-1">
     {{name}} 
   </h1>
   <div class="h-2 mb-2 bg-red-100 smoothwidth" :style="{width:boost+'%'}">

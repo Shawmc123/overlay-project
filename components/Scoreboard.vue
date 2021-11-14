@@ -24,8 +24,8 @@
 export default {
   props: {
     team0: {default:'', type:String},
-    score0: {default:'', type:String},
-    score1: {default:'', type:String},
+    score0: {default:-1, type:Number},
+    score1: {default:-1, type:Number},
     team1: {default:'', type:String},
     time: {default:'', type:Number}
   }
