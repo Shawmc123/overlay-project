@@ -1,9 +1,9 @@
 <template>
   <!-- <div class="w-full h-full bg-red-600 rounded-full" :style="{padding: ((-(Number(val))/max)*50)+'%'}"> -->
   <div class="w-full h-full relative">
-    <div class="w-full h-full bg-blue-500 rounded-full absolute"></div>
+    <div class="w-full h-full bg-blue-500 rounded-full absolute" :style="{'background-color': bgColour}"></div>
     <div
-      class="w-full h-full bg-blue-900 rounded-full absolute inset-1/2 transform smooththing -translate-x-1/2 -translate-y-1/2"
+      class="w-full h-full bg-gray-400 mix-blend-multiply rounded-full absolute inset-1/2 transform smooththing -translate-x-1/2 -translate-y-1/2"
       :style="{ width: size + '%', height: size + '%' }"
     ></div>
     <div
@@ -23,7 +23,8 @@ export default {
   props: {
       max: {default: 100, type: Number},
       val: {type: Number},
-      textClass: {default: '', type: String}
+      textClass: {default: '', type: String},
+      bgColour: {default: 'blue', type: String}
   }
 };
 </script>

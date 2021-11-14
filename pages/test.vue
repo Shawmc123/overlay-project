@@ -13,6 +13,10 @@
       />
     </div>
     <input type="range" max=100 min=0 v-model="val" />
+    <div class="w-32 h-32" style="background-color: #1873FF"></div>
+    <div class="w-32 h-32" style="background-color: #E5E5E5"></div>
+    <div class="w-32 h-32" style="background-color: #C26418"></div>
+    <div class="w-32 h-32" style="background-color: #E5E5E5"></div>
   </div>
 </template>
 
