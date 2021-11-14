@@ -1,9 +1,12 @@
 <template>
 <div class="mt-3 bg-gradient-to-l from-blue-300 via-indigo-400 to-blue-500 w-60 min-w-full">
-  <h1>
-    {{name}} 
+  <h1 class="text-gray-300 smoothwidth font-bold text-xl flex justify-between">
+    {{name}}
+    <span class="px-4">
+      {{boost}}
+    </span> 
   </h1>
-  <div class="h-2 mb-2 bg-red-100 smoothwidth" :style="{width:boost+'%'}">
+  <div class="h-2 mb-2 bg-yellow-500" :style="{width:boost+'%'}">
     <!-- <p> {{boost}} </p> -->
   </div>
 </div>
