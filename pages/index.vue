@@ -12,7 +12,7 @@
       <Playerboard :name="currentPlayer.name" :score="currentPlayer.score" :goals="currentPlayer.goals" :assists="currentPlayer.assists"/>
     </div>
     <div class="grid justify-items-center">
-      <Scoreboard :team0="getTeam0.name" :score0="getTeam0.score" :team1="getTeam1.name" :score1="getTeam1.score"/>
+      <Scoreboard :team0="getTeam0.name" :score0="getTeam0.score" :team1="getTeam1.name" :score1="getTeam1.score" :time="getTime"/>
     </div>
   </div>
 </template>
@@ -37,6 +37,11 @@ export default {
     getTeam1() {
       if (this.$store.state.state.game.teams[1] !== undefined) {
         return this.$store.state.state.game.teams[1]
+      } else return {}
+    },
+    getTime() {
+      if (this.$store.state.state.game.time_seconds !== undefined) {
+        return this.$store.state.state.game.time_seconds
       } else return {}
     }
   }
