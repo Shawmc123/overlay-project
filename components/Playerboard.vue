@@ -18,6 +18,10 @@
       <span class="font-extrabold text-xl font-mono pl-4">{{assists}}</span> 
       <span class="font-extrabold text-lg font-mono">Assists</span>
      </div>
+     <div>
+      <span class="font-extrabold text-xl font-mono pl-4">{{saves}}</span> 
+      <span class="font-extrabold text-lg font-mono">Saves</span>
+     </div>
      </div>
   </div>
 </template>
@@ -25,12 +29,12 @@
 <script>
 export default {
   props: {
-    name: {default:'', type:String},
+    name: {default:'PlayerName', type:String},
     goals: {default:0, type:Number},
-    assists: {default:'', type:String},
-    score: {default:'', type:String},
-    shots: {default:0, type:String},
-    name: {default:'', type:String},
+    assists: {default:0, type:Number},
+    score: {default:0, type:Number},
+    shots: {default:0, type:Number},
+    saves: {default:0, type:Number},
 
   }
 }

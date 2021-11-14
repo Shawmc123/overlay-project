@@ -2,7 +2,7 @@ const WebSocket = require('isomorphic-ws')
 
 export const state = () => ({
     ws: null,
-    wsAddress: 'ws://192.168.137.1:49122',
+    wsAddress: 'ws://192.168.137.1:49122', //Stupid, why does this need to be hardcoded
     counter: 0,
     state: {},
     events: []
